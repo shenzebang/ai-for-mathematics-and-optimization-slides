@@ -1,0 +1,41 @@
+---
+title: "AI for Mathematics and Optimmization"
+author: "Niao He and Zebang Shen"
+format:
+  revealjs:
+    incremental: true   
+    theme: simple
+    slide-number: true
+    transition: slide
+    # css: pdf-gallery.css
+    # include-after-body:
+    #   - pdf-gallery.html
+    # resources:
+    #   - pdfs/
+---
+
+## AI as a tool
+- AI accelerates scientific research.
+  - Examples from the course in the past two years:
+- How does AI help? 
+  - Data analysis, simulation, routine automation, etc.
+
+## AI as a collaborator
+- Focus of this semester: AI accelerates mathematical research.
+  - Core intellecture challenge
+    - formulating hypothesis/definition
+    - design algorithms
+    - proving theorems
+    - constructing counterexamples
+
+## Course organization
+- Passive in previous semester:
+  - Students are assigned with published papers.
+  - Present the existing results in the paper in the end of the semester
+- Active in this semester:
+  - Students are assigned with **open problems** with the __ambition__ to solve it!
+  - If succeed, lead to technical report or even **publications**.
+  - More to be covered later.
+
+## Part of a social experiment
+- 
