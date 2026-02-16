@@ -28,14 +28,34 @@ format:
     - proving theorems
     - constructing counterexamples
 
+
+## Example: First Proof
+<!-- ```{=html} -->
+<iframe
+  src="https://1stproof.org/"
+  style="width:100%; height:80vh; border:0;"
+  title="Example website">
+</iframe>
+
 ## Course organization
-- Passive in previous semester:
+- _Passive_ in previous semester:
   - Students are assigned with published papers.
   - Present the existing results in the paper in the end of the semester
-- Active in this semester:
-  - Students are assigned with **open problems** with the __ambition__ to solve it!
+- _Active_ in this semester:
+  - Students are assigned with **open problems** with the ambition to solve it!
   - If succeed, lead to technical report or even **publications**.
   - More to be covered later.
 
 ## Part of a social experiment
-- 
+- How AI helps students to study new/abstract/challenging materials?
+- How AI helps students to solve open problems?
+
+## Why can we expect this is achievable?
+- Emergence of LLM
+- Many evidentce showing the potential of LLM in mathematical research.
+- We will discuss:
+  - Success stories
+  - Inspiration/Prompting techniques from the success stories
+
+## Success stories
+
