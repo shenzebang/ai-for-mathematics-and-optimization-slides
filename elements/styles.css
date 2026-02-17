@@ -1,0 +1,8 @@
+/* Quarto + revealjs: cover the common caption structures */
+.reveal figure figcaption,
+.reveal figure .figure-caption,
+.reveal .quarto-figure figcaption,
+.reveal .quarto-figure .figure-caption,
+.reveal p.caption {
+  text-align: center !important;
+}

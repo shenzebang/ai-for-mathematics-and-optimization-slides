@@ -19,10 +19,23 @@ author:
 
 
 ## AI as a tool
-- AI accelerates scientific research.
-  - Examples from the course in the past two years:
-- How does AI help? 
-  - Data analysis, simulation, routine automation, etc.
+::: {style="font-size: 0.8em;"}
+
+  - AI accelerates scientific research.
+    - Examples in Phyics and Biology:
+
+      :::: {.columns}
+      ::: {.column width="50%"}
+      ![Physics-informed Neural Network](elements/PINN.png){.cap-center fig-align="center" height=240px}
+      :::
+      ::: {.column width="50%"}
+      ![AlphaFold 2](elements/AlphaFold_2.png){.cap-center fig-align="center" height=240px}
+      :::
+      ::::
+  - How does AI help? 
+    - Function approximation, simulation, routine automation, etc.
+    
+:::
 
 ## AI as a collaborator
 - Focus of this semester: AI accelerates mathematical research.
@@ -34,12 +47,29 @@ author:
 
 
 ## Example: First Proof
-<!-- ```{=html} -->
+
+<div style="height: 0.8em;"></div>
+
 <iframe
   src="https://1stproof.org/"
-  style="width:100%; height:80vh; border:0;"
+  style="width:100%; height:60vh; border:0;"
   title="Example website">
 </iframe>
+
+## Example: First Proof (cont.) 
+
+<div style="height: 0.8em;"></div>
+
+
+:::: {.columns}
+::: {.column width="50%"}
+![X post](elements/first-proof-attempt.png){.cap-center fig-align="center" height=400px}
+:::
+::: {.column width="50%"}
+![scientific american](elements/first-proof-report.png){.cap-center fig-align="center" height=400px}
+:::
+::::
+
 
 ## Course organization
 - _Passive_ in previous semester:

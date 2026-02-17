@@ -17,6 +17,7 @@ format:
     hash: true
     preview-links: auto
     html-math-method: katex
+    css: elements/styles.css
 
     # Title slide background (ONLY the title slide)
     title-slide-attributes:
