@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "AI for Mathematics and Optimmization"
 author: "Niao He and Zebang Shen"
 format:
@@ -12,7 +12,17 @@ format:
     #   - pdf-gallery.html
     # resources:
     #   - pdfs/
+--- -->
 ---
+title: "AI for Mathematics and Optimization"
+author: "Niao He and Zebang Shen"
+<!-- format:
+  revealjs:
+    css: styles.css
+    include-after-body:
+      - after-body.html -->
+---
+
 
 ## AI as a tool
 - AI accelerates scientific research.
