@@ -6,20 +6,23 @@ project:
 
 format:
   revealjs:
-    theme: [simple, elements/title.scss]
+    theme:
+      - simple
+      - elements/title.scss
     transition: slide
     slide-number: true
     incremental: true
-
     center: true
     navigation-mode: linear
     hash: true
     preview-links: auto
-
     html-math-method: katex
 
+    # Title slide background (ONLY the title slide)
     title-slide-attributes:
       data-background-image: elements/title-page-image.jpg
-      data-background-size: cover
+      data-background-size: contain
       data-background-position: center
       data-background-repeat: no-repeat
+      data-background-opacity: "0.9"
+

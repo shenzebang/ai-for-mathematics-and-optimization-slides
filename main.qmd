@@ -1,11 +1,20 @@
-
 ---
 title: "AI for Mathematics and Optimization"
+
+# author:
+#   - name: "Niao He"
+#   - name: "Zebang Shen"
+
+# affiliations:
+#   - name: "YOUR INSTITUTE NAME HERE"
+
+
 author:
-  - "Niao He"
-  - "Zebang Shen"
-institute: 
-  - "D-INFK, ETH Zurich"
+  - name: Niao He
+    affiliation: 
+      - ETH Zurich
+  - name: Zebang Shen
+    affiliation: ETH Zurich
 ---
 
 

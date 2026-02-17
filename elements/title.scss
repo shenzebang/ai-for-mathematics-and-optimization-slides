@@ -1,0 +1,37 @@
+/*-- scss:rules --*/
+
+/* Title slide: force text to white */
+#title-slide,
+#title-slide h1,
+#title-slide h2,
+#title-slide h3,
+#title-slide p,
+#title-slide .title,
+#title-slide .subtitle,
+#title-slide .author,
+#title-slide .institute,
+#title-slide .date,
+#title-slide .quarto-title-author-name,
+#title-slide .quarto-title-authors {
+  color: #ffffff !important;
+}
+
+/* (keep your spacing rules) */
+#title-slide .title {
+  margin-bottom: 0.9em;
+}
+
+#title-slide .quarto-title-authors {
+  margin-top: 0.3em;
+}
+
+#title-slide .quarto-title-author-name {
+  display: block;
+  margin-top: 0.25em;
+}
+
+/* Institute spacing + sizing */
+#title-slide .institute {
+  margin-top: 0.6em;
+  font-size: 0.85em;
+}
