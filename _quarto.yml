@@ -6,16 +6,20 @@ project:
 
 format:
   revealjs:
-    theme: simple
+    theme: [simple, elements/title.scss]
     transition: slide
     slide-number: true
     incremental: true
 
-    # Nice defaults for teaching decks
     center: true
     navigation-mode: linear
-    hash: true          # enables deep-linking to slides
+    hash: true
     preview-links: auto
 
-    # If you use lots of equations, pick one explicitly:
     html-math-method: katex
+
+    title-slide-attributes:
+      data-background-image: elements/title-page-image.jpg
+      data-background-size: cover
+      data-background-position: center
+      data-background-repeat: no-repeat

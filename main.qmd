@@ -1,26 +1,11 @@
-<!-- ---
-title: "AI for Mathematics and Optimmization"
-author: "Niao He and Zebang Shen"
-format:
-  revealjs:
-    incremental: true   
-    theme: simple
-    slide-number: true
-    transition: slide
-    # css: pdf-gallery.css
-    # include-after-body:
-    #   - pdf-gallery.html
-    # resources:
-    #   - pdfs/
---- -->
+
 ---
 title: "AI for Mathematics and Optimization"
-author: "Niao He and Zebang Shen"
-<!-- format:
-  revealjs:
-    css: styles.css
-    include-after-body:
-      - after-body.html -->
+author:
+  - "Niao He"
+  - "Zebang Shen"
+institute: 
+  - "D-INFK, ETH Zurich"
 ---
 
 
