@@ -38,9 +38,9 @@ author:
 :::
 
 ## AI as a collaborator
-- Focus of this semester: AI accelerates mathematical research.
+- Focus: AI accelerates mathematical research.
   - Core intellecture challenge
-    - formulating hypothesis/definition
+    - formulating hypothesis
     - design algorithms
     - proving theorems
     - constructing counterexamples
@@ -52,7 +52,7 @@ author:
 
 <iframe
   src="https://1stproof.org/"
-  style="width:100%; height:60vh; border:0;"
+  style="width:100%; height:50vh; border:0;"
   title="Example website">
 </iframe>
 
@@ -70,6 +70,7 @@ author:
 :::
 ::::
 
+## 
 
 ## Course organization
 - _Passive_ in previous semester:
@@ -85,11 +86,44 @@ author:
 - How AI helps students to solve open problems?
 
 ## Why can we expect this is achievable?
-- Emergence of LLM
-- Many evidentce showing the potential of LLM in mathematical research.
-- We will discuss:
-  - Success stories
-  - Inspiration/Prompting techniques from the success stories
+- Emergence of LLM, success in mathematical competition.
+  
+  ![](elements/ai_math_progress_math_benchmark.png){fig-align="center" height=300px}
+
+- Many evidentce showing the potential of LLM in mathematical research
+  <!-- - Inspiration/Prompting techniques from the success stories -->
 
 ## Success stories
 
+<div style="height: 0.8em;"></div>
+
+:::: {.columns}
+::: {.column width="50%"}
+![Google](elements/Gemini-paper.png){.cap-center fig-align="center"}
+:::
+::: {.column width="50%"}
+![Open AI](elements/Openai-paper.png){.cap-center fig-align="center"}
+:::
+::::
+
+## Success stories: Case study
+
+For a demonstration of a line plot on a polar axis, see @fig-polar.
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 4 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
