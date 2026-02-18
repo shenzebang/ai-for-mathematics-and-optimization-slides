@@ -6,18 +6,21 @@ project:
 
 format:
   revealjs:
+    # html-math-method: mathjax
     theme:
       - simple
       - elements/title.scss
     transition: slide
     slide-number: true
-    incremental: true
+    incremental: false
     center: true
     navigation-mode: linear
     hash: true
     preview-links: auto
     html-math-method: katex
     css: elements/styles.css
+    code-fold: true
+    
 
     # Title slide background (ONLY the title slide)
     title-slide-attributes:
@@ -26,4 +29,3 @@ format:
       data-background-position: center
       data-background-repeat: no-repeat
       data-background-opacity: "0.9"
-

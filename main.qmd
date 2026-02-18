@@ -22,7 +22,7 @@ author:
 ::: {style="font-size: 0.8em;"}
 
   - AI accelerates scientific research.
-    - Examples in Phyics and Biology:
+    - Examples in Phyics and Biology: ([AI for Science Seminars in the past](https://odi.inf.ethz.ch/teaching/AI4Science.html))
 
       :::: {.columns}
       ::: {.column width="50%"}
@@ -38,6 +38,10 @@ author:
 :::
 
 ## AI as a collaborator
+:::: {.columns}
+
+::: {.column width="50%" style="font-size: 0.8em;"}
+
 - Focus: AI accelerates mathematical research.
   - Core intellecture challenge
     - formulating hypothesis
@@ -45,6 +49,19 @@ author:
     - proving theorems
     - constructing counterexamples
 
+
+:::
+
+::: {.column width="50%"}
+
+::: {.v-center-60}
+
+![](elements/nature_2021.png){.cap-center fig-align="center" height=400px}
+
+:::
+
+:::
+::::
 
 ## Example: First Proof
 
@@ -70,7 +87,8 @@ author:
 :::
 ::::
 
-## 
+
+
 
 ## Course organization
 - _Passive_ in previous semester:
@@ -79,7 +97,7 @@ author:
 - _Active_ in this semester:
   - Students are assigned with **open problems** with the ambition to solve it!
   - If succeed, lead to technical report or even **publications**.
-  - More to be covered later.
+    - More to be covered later.
 
 ## Part of a social experiment
 - How AI helps students to study new/abstract/challenging materials?
@@ -92,6 +110,37 @@ author:
 
 - Many evidentce showing the potential of LLM in mathematical research
   <!-- - Inspiration/Prompting techniques from the success stories -->
+
+## Successful stories: A Long List
+
+<div style="height: 0.8em;"></div>
+
+<iframe
+  src="https://seewoo5.github.io/awesome-ai-for-math/?utm_source=chatgpt.com"
+  style="width:100%; height:50vh; border:0;"
+  title="Example website">
+</iframe>
+
+## Successful stories: Elliptic Curve ‘Murmurations’
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](elements/Elliptic-curve.png){.cap-center fig-align="center"}
+:::
+
+::: {.column width="70%"}
+
+::: {.v-center-60}
+  <video controls width="720">
+    <source src="https://www.quantamagazine.org/wp-content/uploads/2024/03/Murmurations-byPaulChaikin-Lede.mp4" type="video/mp4">
+  </video>
+:::
+
+:::
+::::
+
+
 
 ## Success stories
 
@@ -106,24 +155,81 @@ author:
 :::
 ::::
 
-## Success stories: Case study
+## Success stories: Case study 
 
-For a demonstration of a line plot on a polar axis, see @fig-polar.
+:::: {.columns .stack}
+::: {.column width="50%" style="font-size: 0.7em;"}
+- Convex optimization problem
+  $$
+    \min_x f(x)
+  $$
+- Gradient Descent, GD (Cauchy, 18th century)
+  $$
+    z_{k+1} : = z_k - \eta \nabla f(z_k)
+  $$
+- Nesterov's Accelerated Gradient Descent, NAG (Nesterov, 1983)
+  $$
+  \begin{aligned}
+    x_{k+1} : =&\ y_k - \eta\ \nabla f(y_k)\\
+    y_{k+1} : =&\ x_{k+1} + \frac{t_k - 1}{t_{k+1}} (x_{k+1} - x_k)
+  \end{aligned}
+  $$
+:::
+::: {.column width="50%" style="font-size: 0.7em;"}
+- Question: $\lim_{k\to \infty} x_k \in \mathrm{argmin}\ f$?
 
-```{python}
-#| label: fig-polar
-#| fig-cap: "A line plot on a polar axis"
 
-import numpy as np
-import matplotlib.pyplot as plt
+::: {.v-center-30}
+![](elements/last-point-convergence.png){.cap-center fig-align="center"}
+:::
+:::
+::::
 
-r = np.arange(0, 2, 0.01)
-theta = 4 * np.pi * r
-fig, ax = plt.subplots(
-  subplot_kw = {'projection': 'polar'} 
-)
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-```
+  
+    
+
+## Concrete Example
+
+::: {.columns}
+::: {.column width="50%" style="font-size: 0.7em;"}
+- Convex optimization problem
+  $$
+    f(x_1, x_2) = \frac{x_1^2 + (|x_2+1|-1)_+^2}{2}
+  $$
+- GD (slow convergence, convergent)
+  $$
+  \begin{aligned}
+  f(z_{k}) = \mathcal{O}(\frac{1}{k}), \\
+    \lim_{k\to \infty} z_k \in \mathrm{argmin} f
+  \end{aligned}
+  $$
+- NAG (fast convergence, oscillation)
+  $$
+  \begin{aligned}
+  f(x_{k}) = \mathcal{O}(\frac{1}{k^2}), \\
+    \lim_{k\to \infty} x_k \in \mathrm{argmin}\ f\ ?
+  \end{aligned}
+  $$
+:::
+
+::: {.column width="50%"}
+
+::: {.v-center-60}
+<div style="height: 3em;"></div>
+  <video controls width="720">
+    <source src="elements/gd_vs_nag_3d.mp4" type="video/mp4">
+  </video>
+:::
+
+<!-- <video controls>
+  <source src="elements/gd_vs_nag_3d.mp4" type="video/mp4">
+</video> -->
+
+:::
+
+:::
+
+
+
+
+## Inspiration / Prompt techniques

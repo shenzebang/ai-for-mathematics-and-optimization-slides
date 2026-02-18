@@ -6,3 +6,17 @@
 .reveal p.caption {
   text-align: center !important;
 }
+
+.v-center-30 {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.v-center-60 {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
