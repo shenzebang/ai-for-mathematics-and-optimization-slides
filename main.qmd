@@ -97,10 +97,10 @@ author:
 - _Active_ in this semester:
   - Students are assigned with **open problems** with the ambition to solve it!
   - If succeed, lead to technical report or even **publications**.
-    - More to be covered later.
+    <!-- - More to be covered later. -->
 
 ## Part of a social experiment
-- How AI helps students to study new/abstract/challenging materials?
+- How AI helps students to study new/abstract/challenging materials? 
 - How AI helps students to solve open problems?
 
 ## Why can we expect this is achievable?
@@ -111,7 +111,7 @@ author:
 - Many evidentce showing the potential of LLM in mathematical research
   <!-- - Inspiration/Prompting techniques from the success stories -->
 
-## Successful stories: A Long List
+## A Long List
 
 <div style="height: 0.8em;"></div>
 
@@ -121,28 +121,60 @@ author:
   title="Example website">
 </iframe>
 
-## Successful stories: Elliptic Curve ‘Murmurations’
+## Elliptic Curve ‘Murmurations’ (Hypothesis) {style="font-size: 0.8em;"}
 
-:::: {.columns}
+:::: {.columns .bleed}
 
 ::: {.column width="30%"}
 ![](elements/Elliptic-curve.png){.cap-center fig-align="center"}
 :::
 
-::: {.column width="70%"}
+::: {.column width="90%" style="font-size: 0.6em;"}
 
-::: {.v-center-60}
-  <video controls width="720">
+- Elliptic curves are crucial in number theory
+  - A key part of Andrew Wiles’ famous proof for Fermat’s Last Theorem.
+  - Crucial in Cryptography
+  - BSD conjecture (a Clay Millennium Prize Problem) is about a curve’s `rank`
+- AI can (magically) accurately predict the `rank` of the elliptic curve, but why?
+  - A wave type relation between prime number and the number of solution to the elliptic curve is observed statistically. Suggest hidden structure.
+  - Progress toward “explaining why”.
+    <div style="height: 0.3em;"></div>
+    ![](elements/flocking_proof.png){.cap-center fig-align="center"}
+<!-- ::: {.v-center-60} -->
+  <!-- <video controls width="720">
     <source src="https://www.quantamagazine.org/wp-content/uploads/2024/03/Murmurations-byPaulChaikin-Lede.mp4" type="video/mp4">
-  </video>
-:::
+  </video> -->
+<!-- ::: -->
 
 :::
 ::::
 
+## Alphaevolve and faster $4\times 4$ matrix multiplication (algorithm) {style="font-size: 0.6em;"}
+
+<div style="height: 0.8em;"></div>
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](elements/alphaevolve-matrix-multiplication-evolution.webp){.cap-center fig-align="center"}
+:::
+
+::: {.column width="60%"}
+- Matrix multiplications are building blocks of modern age.
+- Key performance metric is (# scalar multiplications).
+- AlphaEvolve improves over existing method from 49 to 48, in terms of (# scalar multiplications)
+  - sets up matrix multiplication as a searchable optimization problem
+  - starts from a known solver, then evolves the solver code
+  - loop: propose → run → score → keep best → repeat
+- Scales to multiplication in larger sizes if called recursively.
+
+:::
+
+::::
 
 
-## Success stories
+<!-- ## Success stories (counterexample) -->
+## Reports from Big Companies {auto-animate=true}
 
 <div style="height: 0.8em;"></div>
 
@@ -155,7 +187,22 @@ author:
 :::
 ::::
 
-## Success stories: Case study 
+## Success stories (counterexample) {auto-animate=true}
+
+<div style="height: 0.8em;"></div>
+
+:::: {.columns}
+::: {.column width="30%"}
+![Google](elements/Gemini-paper.png){.cap-center fig-align="center"}
+:::
+::: {.column width="70%"}
+![](elements/conjecture.png){.cap-center fig-align="center"}
+<div style="height: 0.8em;"></div>
+![](elements/counterexample.png){.cap-center fig-align="center"}
+:::
+::::
+
+## Last iterate convergence (theorem) {auto-animate=true}
 
 :::: {.columns .stack}
 ::: {.column width="50%" style="font-size: 0.7em;"}
@@ -188,7 +235,7 @@ author:
   
     
 
-## Concrete Example
+## Concrete Example {auto-animate=true}
 
 ::: {.columns}
 ::: {.column width="50%" style="font-size: 0.7em;"}
@@ -221,15 +268,33 @@ author:
   </video>
 :::
 
-<!-- <video controls>
-  <source src="elements/gd_vs_nag_3d.mp4" type="video/mp4">
-</video> -->
-
 :::
 
 :::
 
+## Stratgy {style="font-size: 0.7em;"}
+
+- Continuous time model, Nesterov ODE (Su, Boyd, Candès, 2016)
+  $$
+    \ddot X(t) + \frac{\gamma}{t} \dot X(t) + \nabla f(X(t)) = 0.
+  $$
+- Known results
+  - $\gamma > 3$, we have $\lim_{t \to \infty} X(t) = X(\infty) \in \mathrm{argmin} f.$ 
+    - Rely on the integrability of an energy function.
+  - $\gamma = 3$ critical case, corresponds to NAG. 
+    - The integral of the energy function in the $\gamma > 3$ diverges.
+- Strategy: Ask query AI to propose a new energy function that is integrable.
+  - Once the continous time model converges, same idea applies to the discrete time dynamics.
+
+## Interaction with AI
+<div style="height: 0.8em;"></div>
+
+Quote from (Jang and Ryu, 2025):
+
+![](elements/interaction_with_AI.png){.cap-center fig-align="center"}
 
 
 
-## Inspiration / Prompt techniques
+<!-- ## Open Problem Collections -->
+
+
