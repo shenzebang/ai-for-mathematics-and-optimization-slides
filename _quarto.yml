@@ -4,6 +4,8 @@ project:
   render:
     - main.qmd
 
+lightbox: true
+
 format:
   revealjs:
     # html-math-method: mathjax
@@ -20,6 +22,8 @@ format:
     html-math-method: katex
     css: elements/styles.css
     code-fold: true
+  
+
     
 
     # Title slide background (ONLY the title slide)

@@ -35,10 +35,10 @@
   margin-left: calc(-50vw + 50%); /* keep it centered */
 }
 
-.reveal .columns ul,
+/* .reveal .columns ul,
 .reveal .columns ol,
 .reveal .columns dl {
   display: block;
   width: 100%;
   box-sizing: border-box;
-}
+} */

@@ -15,6 +15,8 @@ author:
       - ETH Zurich
   - name: Zebang Shen
     affiliation: ETH Zurich
+
+lightbox: true
 ---
 
 
@@ -56,7 +58,7 @@ author:
 
 ::: {.v-center-60}
 
-![](elements/nature_2021.png){.cap-center fig-align="center" height=400px}
+![](elements/nature_2021.png){.cap-center fig-align="center" height=500px}
 
 :::
 
@@ -93,7 +95,7 @@ author:
 ## Course organization
 - _Passive_ in previous semester:
   - Students are assigned with published papers.
-  - Present the existing results in the paper in the end of the semester
+  - Present the existing results in the paper in the end of the semester.
 - _Active_ in this semester:
   - Students are assigned with **open problems** with the ambition to solve it!
   - If succeed, lead to technical report or even **publications**.
@@ -108,7 +110,7 @@ author:
   
   ![](elements/ai_math_progress_math_benchmark.png){fig-align="center" height=300px}
 
-- Many evidentce showing the potential of LLM in mathematical research
+- Many evidentce showing the potential of LLM in mathematical research.
   <!-- - Inspiration/Prompting techniques from the success stories -->
 
 ## A Long List
@@ -132,12 +134,12 @@ author:
 ::: {.column width="90%" style="font-size: 0.6em;"}
 
 - Elliptic curves are crucial in number theory
-  - A key part of Andrew Wiles’ famous proof for Fermat’s Last Theorem.
-  - Crucial in Cryptography
-  - BSD conjecture (a Clay Millennium Prize Problem) is about a curve’s `rank`
+  - A key part of Andrew Wiles’ famous proof for Fermat’s Last Theorem;
+  - Crucial in Cryptography;
+  - BSD conjecture (a Clay Millennium Prize Problem) is about a curve’s `rank`.
 - AI can (magically) accurately predict the `rank` of the elliptic curve, but why?
   - A wave type relation between prime number and the number of solution to the elliptic curve is observed statistically. Suggest hidden structure.
-  - Progress toward “explaining why”.
+  - Leading to progress toward “explaining why”.
     <div style="height: 0.3em;"></div>
     ![](elements/flocking_proof.png){.cap-center fig-align="center"}
 <!-- ::: {.v-center-60} -->
@@ -163,9 +165,9 @@ author:
 - Matrix multiplications are building blocks of modern age.
 - Key performance metric is (# scalar multiplications).
 - AlphaEvolve improves over existing method from 49 to 48, in terms of (# scalar multiplications)
-  - sets up matrix multiplication as a searchable optimization problem
-  - starts from a known solver, then evolves the solver code
-  - loop: propose → run → score → keep best → repeat
+  - sets up matrix multiplication as a searchable optimization problem;
+  - starts from a known solver, then evolves the solver code;
+  - loop: propose → run → score → keep best → repeat.
 - Scales to multiplication in larger sizes if called recursively.
 
 :::
@@ -202,7 +204,7 @@ author:
 :::
 ::::
 
-## Last iterate convergence (theorem) {auto-animate=true}
+## Last iterate convergence (theorem) 
 
 :::: {.columns .stack}
 ::: {.column width="50%" style="font-size: 0.7em;"}
@@ -223,7 +225,7 @@ author:
   $$
 :::
 ::: {.column width="50%" style="font-size: 0.7em;"}
-- Question: $\lim_{k\to \infty} x_k \in \mathrm{argmin}\ f$?
+- Question: $\lim_{k\to \infty} x_k = x_\infty$?
 
 
 ::: {.v-center-30}
@@ -247,14 +249,14 @@ author:
   $$
   \begin{aligned}
   f(z_{k}) = \mathcal{O}(\frac{1}{k}), \\
-    \lim_{k\to \infty} z_k \in \mathrm{argmin} f
+    \lim_{k\to \infty} z_k = z_\infty \in \mathrm{argmin} f
   \end{aligned}
   $$
 - NAG (fast convergence, oscillation)
   $$
   \begin{aligned}
   f(x_{k}) = \mathcal{O}(\frac{1}{k^2}), \\
-    \lim_{k\to \infty} x_k \in \mathrm{argmin}\ f\ ?
+    \lim_{k\to \infty} x_k = x_\infty \in \mathrm{argmin}\ f\ ?
   \end{aligned}
   $$
 :::
@@ -272,7 +274,7 @@ author:
 
 :::
 
-## Stratgy {style="font-size: 0.7em;"}
+## Strategy {style="font-size: 0.6em;"}
 
 - Continuous time model, Nesterov ODE (Su, Boyd, Candès, 2016)
   $$
@@ -281,10 +283,14 @@ author:
 - Known results
   - $\gamma > 3$, we have $\lim_{t \to \infty} X(t) = X(\infty) \in \mathrm{argmin} f.$ 
     - Rely on the integrability of an energy function.
+    $$
+      \int_0^\infty t(f(X(t)) - f^\star) dt < \infty\quad  \text{ or } \quad  \int_0^\infty t\|\dot X(t)\|^2 dt < \infty.
+    $$
   - $\gamma = 3$ critical case, corresponds to NAG. 
-    - The integral of the energy function in the $\gamma > 3$ diverges.
-- Strategy: Ask query AI to propose a new energy function that is integrable.
+    - The integral of the above energy function diverges.
+- Strategy: Ask AI to propose a new energy function that is integrable.
   - Once the continous time model converges, same idea applies to the discrete time dynamics.
+  - This is not always the case. For example, see one of our open problems.
 
 ## Interaction with AI
 <div style="height: 0.8em;"></div>
@@ -294,7 +300,68 @@ Quote from (Jang and Ryu, 2025):
 ![](elements/interaction_with_AI.png){.cap-center fig-align="center"}
 
 
+## Suggestions, Prompting Techniques, and Pitfalls {style="font-size: 0.7em;"}
+<div style="height: 0.8em;"></div>
 
-<!-- ## Open Problem Collections -->
+::: {.columns}
+::: {.column width="50%" style="font-size: 0.7em;"}
+- Suggestions
+  - AI is a collaborator, but you should lead the project
+    - Ask AI to help you to understand the problem.
+    - Literature review using AI. Understand the existing attempts.
+    - Understand the key challenge. Ideally summarize it to a very detailed mathematical problem.
+    - AI only fills small gaps. You need a big picture in mind.
+  
+- Techniques
+  - As much details as possible.
+  - Provide context (upload files) if it helps
+  - Role play: "You are a top expert in optimization. I am working on this open problem. This is a field that I am not familiar with. Please walk me through the problem description in a detailed and highly accessible way. Break it down to the basics in calculas and linear algebra. ..."
 
 
+:::
+
+::: {.column width="50%" style="font-size: 0.7em;"}
+- Pitfalls (personal experience)
+  - **DO NOT** trust AI. It will hallucinate! For example
+    - sign error (mixing $+$ with $-$);
+    - mixing functions (confusing Bessel functions of the first kind with the second kind);
+    - overly optimistic and ignore non-trivial steps.
+  - Verify every step (with the help of AI).
+  - Avoid long context
+    - Do not ask all questions in a single conversation. 
+    - Restarting conversation leads to new ideas.
+
+
+:::
+
+:::
+
+
+<!-- ## Open Problem Collections {style="font-size: 0.7em;"}
+
+
+<div style="height: 0.8em;"></div>
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](elements/list%20of%20problems.png){fig-align="center" height=600px}
+:::
+
+::: {.column width="40%"}
+- Useful links
+  - Course Description
+  
+    ![](elements/description.png){fig-align="center" height=90px}    
+
+  - Logistics
+  
+    ![](elements/logistics.png){fig-align="center" height=90px}
+
+  - Signup Sheet
+  
+    ![](elements/signup.png){fig-align="center" height=90px}
+
+:::
+
+:::: -->
